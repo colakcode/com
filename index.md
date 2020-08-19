@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+## You may want to check these libraries
+### clkProgress
+Use the clkProgress library for a more stylish, useful and customizable progress tool in your Android projects. With the clkProgress library, you can have a customizable CircularProgress and a ProgressDialog where you can inform users.<br/>
 
-You can use the [editor on GitHub](https://github.com/colakcode/clkapps/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<img src="https://raw.githubusercontent.com/colakcode/clkProgress/master/images/circular_progress.gif" width="270" height="555"/> <img src="https://raw.githubusercontent.com/colakcode/clkProgress/master/images/progress_dialog.png" width="270" height="555"/>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<br/>Click for [clkProgress](https://github.com/colakcode/clkProgress)
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/colakcode/clkapps/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### clkOptionsDialog
+Easy Options Dialog for your Android app. Dialog window with three option buttons for simple requests you want to users in your Android applications.<br/><br/>
+<img src="https://raw.githubusercontent.com/colakcode/clkOptionsDialog/master/media/options_dialog.png" width="270" height="555"/>
+<br/>Click for [clkOptionsDialog](https://github.com/colakcode/clkOptionsDialog)
+<br/>
+[@colakcode on GitHub](https://github.com/colakcode/)
