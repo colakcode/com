@@ -4,7 +4,7 @@
 ### clkProgress
 Use the clkProgress library for a more stylish, useful and customizable progress tool in your Android projects. With the clkProgress library, you can have a customizable CircularProgress and a ProgressDialog where you can inform users.<br/>
 
-<img src="https://github.com/colakcode/clkProgress/blob/master/images/circular_progress.gif" width="360" height="740"/> <img src="https://github.com/colakcode/clkProgress/blob/master/images/progress_dialog.png" width="360" height="740"/>
+<img src="https://raw.githubusercontent.com/colakcode/clkProgress/master/images/circular_progress.gif" width="360" height="740"/> <img src="https://raw.githubusercontent.com/colakcode/clkProgress/master/images/progress_dialog.png" width="360" height="740"/>
 
 <br/>Click for [clkProgress](https://github.com/colakcode/clkProgress)
 
