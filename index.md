@@ -10,7 +10,7 @@ Use the clkProgress library for a more stylish, useful and customizable progress
 
 ### clkOptionsDialog
 Easy Options Dialog for your Android app. Dialog window with three option buttons for simple requests you want to users in your Android applications.<br/>
-![OptionsDialog](https://github.com/colakcode/clkOptionsDialog/blob/master/media/options_dialog.png)<br/>
+![OptionsDialog](https://raw.githubusercontent.com/colakcode/clkOptionsDialog/master/media/options_dialog.png)<br/>
 <br/>Click for  [clkOptionsDialog](https://github.com/colakcode/clkOptionsDialog)
 
 
