@@ -1,22 +1,29 @@
 
+@font-face {
+  font-family: "baloo";
+  src: url("css/baloo-tama.ttf");
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    /*font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,Helvetica Neue,sans-serif; */
-    font-family: 'Vollkorn', serif;
+    font-family: 'baloo';
 }
 
 .header {
     background-color: #333;
     color: #2E4053;
     padding: 0px;
+    position: fixed;
+    width: 100%;  
+    z-index: 10;
 }
 
  /* Add a black background color to the top navigation */
  .topnav {
     overflow: hidden;
-    margin: 0px;
+    margin: 5px 0px;
     height: 100%;
   }
   
@@ -40,9 +47,9 @@
     display: block;
     color: white;
     text-align: center;
-    padding: 10px 16px;
+    padding: 10px 8px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 22px;
     margin: 0px;
   }
   
@@ -57,19 +64,19 @@
 
   .topnav a.site-name:hover{
     background-color: #333;
-    }
+  }
 
 
   @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a {
-        padding: 4px 16px;
+        padding: 4px 8px;
+        font-size: 18px;
     }
     .topnav a.icon {
       float: right;
       display: block;
     }
-
     .topnav a.site-name{
         display: none;
     }
@@ -109,7 +116,6 @@
     padding: 8px;
 }
 
-
 .aside {
     background-color: #33b5e5;
     padding: 15px;
@@ -120,15 +126,12 @@
 }
 
 .text-primary {
-    font-family: 'Vollkorn', serif;
     color: #2c3e50;
 }
-
 
 .text-secondary {
     font-size: 15px;
     color: #566573;
-    font-family: 'Vollkorn', serif;  
 }
 
 .content {
@@ -138,14 +141,17 @@
 .content-primary {
     display: inline-block;
     *display: inline;
-    width: 80%;
+    width: 100%;
     vertical-align: top;
+
 }
 
 .content-secondary {
-    width: 28%;
+    width: 50%;
     position: relative;
     margin-top: 10px;
+    margin-left: 25%;
+    font-family: 'Baloo Tamma 2', cursive;
 }
 
 .content-secondary img {
@@ -195,20 +201,25 @@ hr.rounded {
     .text-secondary {
         font-size: 18px;
         color: #566573;
-        font-family: 'Vollkorn', serif;  
+       
     }
 
     .content-secondary {
         display: inline-block;
         *display: inline;
-        height: 100%;
+        width: 50%;
         position: relative;
     }
 
     .content-secondary img {
         margin-left: 20px;
-        width: 100%;
+        width: 80%;
     }
+
+    .topnav a {
+      padding: 4px 16px;
+      font-size: 18px;
+  }
 
 }
 
@@ -227,17 +238,20 @@ hr.rounded {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 
-    .text-secondary {
-        font-size: 18px;
-        color: #566573;
-        font-family: 'Vollkorn', serif;  
-    }
+    .content-primary {
+      display: inline-block;
+      *display: inline;
+      width: 80%;
+      vertical-align: top;
+  }
 
     .content-secondary {
         display: inline-block;
         *display: inline;
         width: 18%;
         position: relative;
+        margin-left: 0px;
+        font-family: 'Baloo Tamma 2', cursive;
     }
 
     .content-secondary img {
@@ -245,8 +259,18 @@ hr.rounded {
         width: 80%;
     }
 
+    .text-secondary {
+      font-size: 20px;
+      color: #566573;
+  }
+
     .site-name {
         float: right;
-        color: red;
+        color: white;
     }
+
+    .topnav a {
+      padding: 4px 16px;
+      font-size: 22px;
+  }
 }
