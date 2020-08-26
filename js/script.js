@@ -18,3 +18,23 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+$(document).ready(function(){
+  $("#get-android-libraries").load("contents/android_libraries.html")
+})
+
+$(document).ready(function(){
+  $("#get-clk-pie-charts").load("contents/clk_pie_charts.html")
+})
+
+$(document).ready(function(){
+  $("#get-clk-progress").load("contents/clk_progress.html")
+})
+
+$(document).ready(function(){
+  $("#get-clk-options-dialog").load("contents/clk_options_dialog.html")
+})
+
+$(document).ready(function(path){
+  $("#method("+path+")").load(path)
+})

@@ -136,6 +136,7 @@
 
 .content {
     background-color:white;
+    position: relative;
 }
 
 .content-primary {
@@ -143,7 +144,16 @@
     *display: inline;
     width: 100%;
     vertical-align: top;
+    
+}
 
+.content-primary img{
+  width: 30%;
+}
+
+.content a.content-info {
+  color: grey;
+  margin-bottom: 50px  ;
 }
 
 .content-secondary {
@@ -173,7 +183,7 @@ hr.rounded {
 }
 
 #link { 
-    color: #566573;
+    color: #0099cc;
     text-decoration:none;
 }
 .footer #link { color: #fff; }
@@ -202,6 +212,10 @@ hr.rounded {
         font-size: 18px;
         color: #566573;
        
+    }
+
+    .content-primary img{
+      width: 30%;
     }
 
     .content-secondary {
@@ -243,6 +257,10 @@ hr.rounded {
       *display: inline;
       width: 80%;
       vertical-align: top;
+  }
+
+  .content-primary img{
+    width: 30%;
   }
 
     .content-secondary {
