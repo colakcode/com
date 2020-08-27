@@ -1,0 +1,69 @@
+/* Desktop */
+.contents {
+    width: 70%;
+    display: inline-block;
+      *display: inline;
+      vertical-align: top;
+}
+
+.right-menu {
+    width:28%;
+    display: inline-block;
+      *display: inline;
+    padding-left:60px;
+    margin:0;
+    vertical-align: top;
+   
+}
+
+
+.right-menu img {
+    width: 30px;
+    margin: 10px;
+}
+
+.right-menu ul {
+    background-color:white;
+    list-style-type: none;
+    margin-top: 16px;
+}
+
+.right-menu ul li {
+    margin-left: 0px;
+    font-size: 16px;
+    font-style: inherit;
+    margin-top: 10px;
+}
+
+.right-menu ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+@media screen and (max-width: 1280px) {
+    /*Phone or Tablet*/
+    .contents{
+        width:95%
+    }
+
+    .right-menu {
+        width: 95%;
+        padding-left:0px;
+    }
+
+    .right-menu img {
+        width: 20px;
+        margin: 10px;
+    }
+
+    .right-menu h2{
+        font-size:16px;
+    }
+
+    .right-menu ul li {
+        font-size: 16px;
+        font-style: inherit;
+        font-size: 14px;
+    }
+    
+}

@@ -35,6 +35,6 @@ $(document).ready(function(){
   $("#get-clk-options-dialog").load("contents/clk_options_dialog.html")
 })
 
-$(document).ready(function(path){
-  $("#method("+path+")").load(path)
+$(document).ready(function(){
+  $("#right-menu").load("menus/right-menu.html");
 })
