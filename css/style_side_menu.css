@@ -18,11 +18,13 @@
 
 .right-menu .item-a{
     display: flex; flex-direction: row;
+    text-decoration: none;
 }
 
 .right-menu .item-a .text{
     display:inline-block; *display: inline; width: 85%; margin-top: 10px;
     color: #566573;
+    text-decoration: none;
 }
 
 
