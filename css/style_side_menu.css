@@ -16,6 +16,19 @@
     margin-top: 40px;
 }
 
+.right-menu .item-a{
+    display: flex; flex-direction: row;
+}
+
+.right-menu .item-a .text{
+    display:inline-block; *display: inline; width: 85%; margin-top: 10px;
+    color: #566573;
+}
+
+
+.right-menu .item-a img{
+    display:inline-block;  width: 30px;
+}
 
 .right-menu img {
     width: 30px;
