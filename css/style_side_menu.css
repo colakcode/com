@@ -10,10 +10,10 @@
     width:28%;
     display: inline-block;
       *display: inline;
-    padding-left:60px;
+    padding-left:50px;
     margin:0;
     vertical-align: top;
-   
+    margin-top: 40px;
 }
 
 
