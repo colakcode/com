@@ -160,10 +160,10 @@
 
   .slider-img-1{ 
     content:url('/media/clkGraphs/clkGraphs_banner-3.png');
-    margin-left:0%;
+    margin-left:10%;
     float: left;
-    width: auto;
     height: 500px;
+    position: relative;
   }
 
   .slider-img-2{  
