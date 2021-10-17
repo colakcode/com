@@ -155,7 +155,7 @@
       background-color: #0b0d12;
   }
   .top-slider ul:not(.ul-second){     
-      top:10%; 
+      top:10%;
   }
 
   .slider-img-1{ 
@@ -163,6 +163,7 @@
     float: left;
     height: 500px;
     position: relative;
+    width: 100%;
   }
 
   .slider-img-2{  
