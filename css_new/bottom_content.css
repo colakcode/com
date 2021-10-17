@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "baloo";
+    src: url("baloo-tama.ttf");
+}
+
+.title{
+    color: black;
+    font-size: 18px;
+    font-style: bold;
+    text-decoration: none;
+}
+
+.text{
+    color: grey;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px;
+}

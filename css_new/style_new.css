@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family: "baloo";
+    src: url("baloo-tama.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'baloo';
+}
+
+hr.rounded {
+    border-top: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;  
+    padding: 15px;
+}
+
+
+
+#link { 
+    color: white;
+    text-decoration:none;
+    font-size: 16px;
+}
+
+.footer #link { color: #fff;}
+
+.footer a {
+    margin-right: 3px;
+}
+
+.content {
+    background-color:white;
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-top: 50px;
+}
+
+.content h3 {
+    color: black;
+}
+
+.content a:not(.content-link) {
+    font-size: 14px;
+    color: #566573;
+}
+
+.content-link{
+    color:black;
+    text-decoration: none;
+    color:#0099cc ;
+}
+
+.content p {
+    font-size : 18px;
+}
+
+  
+.content-secondary img {
+    margin-left: 20px;
+    width: 80%;
+}
+  
+hr.rounded {
+    border-top: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+}

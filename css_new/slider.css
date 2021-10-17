@@ -1,0 +1,183 @@
+.top-slider {
+    /* The image used */
+    /* Add the blur effect 
+    filter: blur(2px);
+    -webkit-filter: blur(2px);*/
+    /*background-image: url("/media/clkgraph_back.png");
+    
+    /* Full height */
+    height: auto; 
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:block; 
+    background-color: #0b0d12;
+}
+
+/* to use top-slider divs with bakcground image (back-1 : slide 1)*/
+.back-1 {
+    background-image: url('/media/clkgraph_back.png');
+    background-color: #0b0d12;
+}
+
+.top-slider img.middle {
+    height: 50%; 
+    margin-left: 20%; 
+    margin-top: 10px;
+
+}
+
+.top-slider a.linked-text {
+    background-color: rgb(45,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 1px solid #f1f1f1; 
+    left: 10%;
+    position: relative;
+    z-index: 2;
+    padding: 2%;
+    text-align: center;  
+}
+
+.top-slider ul:not(.ul-second){
+    color: #d1d4d4;
+    font-weight: bold;
+    margin-right: 0%;
+    position: absolute;
+    z-index: 2;  
+    padding: 2%;
+    top: 30%;
+    right: 5%;
+    text-align: left;
+    font-size: 24px;
+    list-style: none; 
+}
+
+
+.ul-second{
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;  
+    padding: 2%;
+    top: 20%;
+    margin-left: 55%;
+    text-align: left;
+    font-size: 24px;
+    list-style: none; 
+    color: white;
+    font-size: 36px;
+}
+
+
+
+
+/* for using image inside divs instead of using background image for top-slider */
+.slider-img-1{  
+    content:url("/media/clkGraphs/clkGraphs_banner-1.png");
+    height: 501px;
+    margin-left: 20%;
+    z-index: 1;
+    position: absolute;
+}
+
+.slider-img-2{  
+    content:url("/media/clkBudget/save_screen.png");
+    height: 501px;
+    margin-left: 15%;
+    z-index: 1;
+    position: relative;
+}
+
+.top-slider a.play-store{
+    border: 1px solid #f1f1f1; 
+    text-decoration: none;
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    color: grey;
+    top: 30px;
+    background:url('/media/btn_play.png') no-repeat center left; 
+    background-size:50px auto;
+    background-color: white;
+    height: 60px;  
+    padding: 10px;
+    padding-left: 60px; 
+}
+
+.first {
+    left:50%;
+    bottom: 200px;
+    position: relative;
+    z-index: 2;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    font-size : 1vw;  
+  }
+
+  /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 10px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+  }
+
+@media screen and (max-width: 1367px) {
+  .back-1 {
+      background-image: url('/media/clkgraph_back_2.png');
+      background-color: #0b0d12;
+    }
+    .slider-img-1{ 
+        content:url('/media/clkGraphs/clkGraphs_banner-2.png');
+        height: 501px;
+        margin-left: 0%;
+    }
+
+    .ul-second{
+        font-size: 20px;
+    }
+    
+}
+  
+@media screen and (max-width: 900px) {
+  .back-1 {
+      background-image: url('/media/clkgraph_back_3.png');
+      background-color: #0b0d12;
+  }
+  .top-slider ul:not(.ul-second){     
+      top:10%; 
+  }
+
+  .slider-img-1{ 
+    content:url('/media/clkGraphs/clkGraphs_banner-3.png');
+    margin-left:0%;
+    float: left;
+    width: auto;
+    height: 500px;
+  }
+
+  .slider-img-2{  
+    content:url("/media/clkBudget/save_screen3.png");
+    height: 501px;
+    margin-left: 15%;
+    z-index: 1;
+    position: relative;
+    }
+    .ul-second{
+        top: 10%;
+        margin-left: 15%;
+    }
+}
+
