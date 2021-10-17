@@ -71,9 +71,6 @@
     font-size: 36px;
 }
 
-
-
-
 /* for using image inside divs instead of using background image for top-slider */
 .slider-img-1{  
     content:url("/media/clkGraphs/clkGraphs_banner-1.png");
@@ -81,6 +78,7 @@
     margin-left: 20%;
     z-index: 1;
     position: absolute;
+    alt:"/media/clkGraphs/clkGraphs_banner-1";
 }
 
 .slider-img-2{  
@@ -134,7 +132,7 @@
     background-color: #717171;
   }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1367px) {
   .back-1 {
       background-image: url('/media/clkgraph_back_2.png');
       background-color: #0b0d12;

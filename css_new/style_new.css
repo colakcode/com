@@ -31,10 +31,17 @@ hr.rounded {
     font-size: 16px;
 }
 
+
+#link-2 { 
+    color: #0099cc;
+    text-decoration:none;
+    font-size: 18px;
+}
+
 .footer #link { color: #fff;}
 
 .footer a {
-    margin-right: 3px;
+    margin-right: 8px;
 }
 
 .content {
@@ -45,8 +52,16 @@ hr.rounded {
     margin-top: 50px;
 }
 
-.content h3 {
-    color: black;
+.content a {
+    font-size: 18px;
+}
+
+.content h2 {
+    color: #2c3e50;
+}
+
+.content h3{
+    color: #2c3e50;
 }
 
 .content a:not(.content-link) {
@@ -62,6 +77,7 @@ hr.rounded {
 
 .content p {
     font-size : 18px;
+    color: #566573;
 }
 
   

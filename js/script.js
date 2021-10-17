@@ -28,6 +28,10 @@ $(document).ready(function(){
 })
 
 $(document).ready(function(){
+  $("#get-clkbudget").load("/contents/clkbudget.html")
+})
+
+$(document).ready(function(){
   $("#get-clk-pie-charts").load("/contents/clk_pie_charts.html")
 })
 
