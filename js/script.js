@@ -20,21 +20,26 @@ function myFunction() {
 }
 
 $(document).ready(function(){
-  $("#get-android-libraries").load("contents/android_libraries.html")
+  $("#get-android-libraries").load("/contents/android_libraries.html")
 })
 
 $(document).ready(function(){
-  $("#get-clk-pie-charts").load("contents/clk_pie_charts.html")
+  $("#get-clkgraphs").load("/contents/clkgraphs.html")
 })
 
 $(document).ready(function(){
-  $("#get-clk-progress").load("contents/clk_progress.html")
+  $("#get-clk-pie-charts").load("/contents/clk_pie_charts.html")
 })
 
 $(document).ready(function(){
-  $("#get-clk-options-dialog").load("contents/clk_options_dialog.html")
+  $("#get-clk-progress").load("/contents/clk_progress.html")
 })
 
 $(document).ready(function(){
-  $("#right-menu").load("menus/right-menu.html");
+  $("#get-clk-options-dialog").load("/contents/clk_options_dialog.html")
 })
+
+$(document).ready(function(){
+  $("#right-menu").load("/menus/right-menu.html");
+})
+
