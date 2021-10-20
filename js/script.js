@@ -1,49 +1,94 @@
-$(document).ready(function(){     
-    $("#get-header").load("header.html");
-});
+function responsiveNavigation() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+}
 
-$(document).ready(function(){     
-  $("#get-footer").load("footer.html");
-});
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("top-slider");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  selectDots(myIndex-1);
+  x[myIndex-1].style.display = "block";
+  
+  setTimeout(carousel, 15000); 
+}
 
-$(document).ready(function(){     
-  $("#get-topnav").load("topnav.html");
-});
+slideIndex=0;
+function plusSlides(n) {
+  slideIndex+=n;
+  if(slideIndex>1) slideIndex=1;
+  else if(slideIndex<0) slideIndex=0;
+  showSlides(slideIndex);
+}
 
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+var slideCount = 0;
+function showSlides(n) {
+  
+  var slides = document.getElementsByClassName("top-slider");
+
+  for (var i = 0; i < slides.length; i++) {
+    if(slideIndex!=i)
+      slides[i].style.display = "none";  
+    else 
+      slides[slideIndex].style.display = "block";
+  }
+
+  selectDots(slideIndex);
+}
+
+function selectDots(n){
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < dots.length; i++) {
+    if(i!=n){
+      dots[i].className = "dot";
+    }else{
+      dots[i].className = "dot active";
+    }     
   }
 }
 
-$(document).ready(function(){
-  $("#get-android-libraries").load("/contents/android_libraries.html")
-})
+//jQuery --> Get screen bottom position and item vertical position and detect item is visible?
+function detectVerticalPosition(item){
+    var itemCN = item.attr("class");
+    if(itemCN==null) itemCN="";
+    $(window).scroll(function() {
+        if(item.offset().top < ($(window).scrollTop()+$(window).height())){
+            item.attr('class', itemCN+" move_up");
+            $('.note').text(item.offset().top+"/"+($(window).scrollTop()+$(window).height())+ " : true / "+ item.attr("class"));
+        }else{
+            item.attr('class', itemCN);
+        }
+    }).scroll();
+}
 
-$(document).ready(function(){
-  $("#get-clkgraphs").load("/contents/clkgraphs.html")
-})
+/* Snackbar message
+   <div id="snackbar">Snackbar message..</div> --> Anywhere on the page
+*/
+function showSnackbar() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 
-$(document).ready(function(){
-  $("#get-clkbudget").load("/contents/clkbudget.html")
-})
+/* Write a message to html element with jQuery
+   With id : $('#itemId').text(message) or With class : $('.itemClass').text(message)
+   <div id="itemId"></div>
+*/
+function writeAMessageToItem(item, message){
+    item.text(message);
+}
 
-$(document).ready(function(){
-  $("#get-clk-pie-charts").load("/contents/clk_pie_charts.html")
-})
 
-$(document).ready(function(){
-  $("#get-clk-progress").load("/contents/clk_progress.html")
-})
-
-$(document).ready(function(){
-  $("#get-clk-options-dialog").load("/contents/clk_options_dialog.html")
-})
-
-$(document).ready(function(){
-  $("#right-menu").load("/menus/right-menu.html");
-})
 

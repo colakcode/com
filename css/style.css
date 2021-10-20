@@ -4,6 +4,10 @@
     src: url("baloo-tama.ttf");
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -23,14 +27,11 @@ hr.rounded {
     padding: 15px;
 }
 
-
-
 #link { 
     color: white;
     text-decoration:none;
     font-size: 16px;
 }
-
 
 #link-2 { 
     color: #0099cc;
@@ -62,7 +63,29 @@ hr.rounded {
 
 .content h3{
     color: #2c3e50;
+    top:0%;
 }
+
+.innvisible{
+    opacity: 0;
+}
+
+.move_up {
+    position: relative;
+    animation: move_up 1s ;
+    opacity: 1;
+  }
+
+@keyframes move_up {
+    from {
+        bottom: -50px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+  }
 
 .content a:not(.content-link) {
     font-size: 14px;
@@ -79,7 +102,6 @@ hr.rounded {
     font-size : 18px;
     color: #566573;
 }
-
   
 .content-secondary img {
     margin-left: 20px;
@@ -97,3 +119,50 @@ hr.rounded {
         padding-left: 3%;
     }
 }
+
+
+/* SNACKBAR ****************/
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  /****************/
+

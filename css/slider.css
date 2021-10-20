@@ -16,17 +16,22 @@
     background-color: #0b0d12;
 }
 
-/* to use top-slider divs with bakcground image (back-1 : slide 1)*/
-.back-1 {
+/*  to use top-slider divs with bakcground image (back-1 : slide 1)
     background-image: url('/media/clkgraph_back.png');
     background-color: #0b0d12;
+*/
+.back-1 {
+    background: linear-gradient(to bottom right, #0b0d12 55%, #0494b8 100%);
+}
+
+.back-2 {
+    background: linear-gradient(to bottom, #0b0d12 18%, #0494b8 100%);
 }
 
 .top-slider img.middle {
     height: 50%; 
     margin-left: 20%; 
     margin-top: 10px;
-
 }
 
 .top-slider a.linked-text {
@@ -56,7 +61,6 @@
     list-style: none; 
 }
 
-
 .ul-second{
     font-weight: bold;
     position: absolute;
@@ -68,7 +72,6 @@
     font-size: 24px;
     list-style: none; 
     color: white;
-    font-size: 36px;
 }
 
 /* for using image inside divs instead of using background image for top-slider */
@@ -116,12 +119,39 @@
     font-size : 1vw;  
   }
 
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 250px;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
   /* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 13px;
     width: 13px;
-    margin: 10px 2px;
+    margin: 15px 5px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -132,11 +162,26 @@
     background-color: #717171;
   }
 
+  /* Slider Transition fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+
 @media screen and (max-width: 1367px) {
-  .back-1 {
-      background-image: url('/media/clkgraph_back_2.png');
-      background-color: #0b0d12;
-    }
     .slider-img-1{ 
         content:url('/media/clkGraphs/clkGraphs_banner-2.png');
         height: 501px;
@@ -150,12 +195,9 @@
 }
   
 @media screen and (max-width: 900px) {
-  .back-1 {
-      background-image: url('/media/clkgraph_back_3.png');
-      background-color: #0b0d12;
-  }
   .top-slider ul:not(.ul-second){     
-      top:10%;
+      top:10%; 
+      right: 0%;
   }
 
   .slider-img-1{ 
@@ -177,4 +219,9 @@
         margin-left: 15%;
     }
 }
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
 
