@@ -26,3 +26,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("#get-options-dialog").load("/contents/clk_options_dialog.html")
 })
+
+$(document).ready(function(){     
+  $("#get-privacy-top").load("/policy/top.html");
+});
