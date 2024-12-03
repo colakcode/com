@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 50%;
+  padding: 0 4px;
+  margin: 0.25%;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.columnd {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.desc {
+ width: 100%; 
+ text-align: center; 
+ font-weight: bold;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/topnav.css">
+
+
+</head>
+
+<body>
+
+<nav class="topnav" id="myTopnav">
+        <a href="main.html" >Back</a>      
+</nav>
+
+<!-- Header -->
+<div class="header">
+  <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(66, 65, 62);
+  font-size: 3vw;">Gallery of Yada Game</h1>
+</div>
+
+<!-- Photo Grid -->
+<div class="row" style = "width: 50%; margin-left: 25%; margin-bottom: 50px;">
+    
+    <img src="media/yada_detailed.png" style="width:100%">
+    <p class="desc">Detailed picture of the main character</p>
+  </div>
+<div class="row" style="margin-bottom: 150px; margin-left:2%; margin-right:2%;"> 
+  <div class="column">
+    
+    <img src="media/camp_fire.png" style="width:100%">
+    <img src="media/barrel.png" style="width:100%">
+    <img src="media/sunset.png" style="width:100%">
+    <img src="media/shield.png" style="width:100%">
+    <img src="media/forrest.png" style="width:100%;">
+    <img src="media/castle_tower.png" style="width:100%">  
+  </div>  
+  <div class="column">
+    <img src="media/windmill.png" style="width:100%">
+    <img src="media/lake_daylight.png" style="width:100%">
+    <img src="media/town_1.png" style="width:100%">
+    <img src="media/sword.png" style="width:100%"> 
+    <img src="media/waterfall.png" style="width:100%">    
+    <img src="media/cannons.png" style="width:100%">   
+  </div>
+
+  <div class="column">    
+    <img src="media/house_1.png" style="width:100%"> 
+    <img src="media/castle_guard.png" style="width:100%">
+    <img src="media/flag_blue.png" style="width:100%">
+    <img src="media/tareget_boards.png" style="width:100%">
+    <img src="media/wooden_boxes.png" style="width:100%">
+       
+  </div>  
+</div>
+
+</body>
+</html>

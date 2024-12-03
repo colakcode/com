@@ -1,0 +1,423 @@
+
+@font-face {
+    font-family: "baloo";
+    src: url("baloo-tama.ttf");
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+  /*background-image: url("media/back.png");*/
+  background-color:rgb(255, 255, 255);
+  font-family: Arial;
+  background-repeat:inhe;
+  background-size: 100%;
+}
+
+/* Center website */
+.main {
+  max-width: 100%;
+  padding: 0;
+}
+
+.top_menu{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  width: 100%;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+
+}
+
+.bg-image{
+  /* The image used */
+  background-image: url('media/yada_view1.png');
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 6500px; 
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+
+  position:absolute;
+  z-index: 0;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+  height: auto;
+  display: none; /* Hide all elements by default */
+  padding-top: 2%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transform: translate(0%, 0%);
+}
+
+
+/* Content */
+.content_ {
+    margin-left: 25%;
+    width: 50%;
+    height: auto;
+    z-index: 1;
+    position: relative;
+
+  }
+
+.column iframe {
+  width: 100%;
+  height:500px;
+  opacity: 1;
+  border:none;
+  position:static;
+  z-index: 2;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 1); /* Black w/opacity/see-through */
+}
+
+.column img {
+  display: block;
+  width: 100%;
+  height:450px;
+  opacity: 1;
+}
+
+.column_half {
+    float: left;
+    width: 50%;
+    height: 950px;
+    display: none; /* Hide all elements by default */
+    padding-top: 5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.column_half iframe {
+  display: block;
+  width: 100%;
+  margin-left: 25%;
+  height:400; 
+}
+
+.column_half img {
+  display: block;
+  width:100%;
+  height:400;
+}
+
+.content_title{
+  margin-left: 25%;
+  margin-right: 25%;
+  font-weight: bold;
+}
+
+.content_text{
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 12pt;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: antiquewhite;
+  cursor: pointer;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+/*Image Slide**************************************************************************************************************************/
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12pt;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  vertical-align: bottom;
+  background-color: #222;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 14pt;
+}
+
+.irow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.irow{
+  height: 250px;
+  background-color: red;
+  display: table;
+}
+/* Six columns side by side */
+.icolumn {
+  height:10%;
+  width: 25%;
+  display: in-block;
+  position: relative;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  width: 100%;
+  height: 60%;
+
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1366px) {
+  .column {
+
+  }
+
+  .column iframe {
+    width: 100%;
+    height:500px;
+    opacity: 1;
+    border:none;
+    position:static;
+    z-index: 2;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 1); /* Black w/opacity/see-through */
+  }
+  .content_{
+    margin-left: 10%;
+    margin-right: 10%;;
+    width: 80%;
+  }
+
+  .content_title{
+    margin-left: 25%;
+    margin-right: 25%;
+    font-weight: bold;
+  }
+  
+  .content_text{
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 12pt;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .content_{
+    margin-left: 05%;
+    margin-right: 5%;;
+    width: 90%;
+  }
+
+  .column_half {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .column iframe {
+    height:350px;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .content_title{
+    margin-left: 4%;
+    margin-right: 4%;
+    font-weight: bold;
+  }
+  
+  .content_text{
+    margin-left: 4%;
+    margin-right: 4%;
+    font-size: 12pt;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+  .top_menu{
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .content_ {
+    margin-left: 0;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+  .container{
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .mySlides{
+    margin-left:0px;
+    vertical-align: left;
+    width: 100%;
+  }
+
+  .mySlides img{
+    margin-left:0px;
+    vertical-align: left;
+    padding-left: 0;
+    width: 100%;
+    height: auto;
+  }
+  img {
+    vertical-align: left;
+  }
+
+  .icolumn {
+    height:10%;
+    width: 100%;
+    display: in-block;
+    position: relative;
+    margin-left: 0px;
+    height: auto;
+  }
+
+  .column iframe {
+    height:280px;
+    width: 100%;
+  }
+
+  .content_title{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-weight: bold;
+  }
+  
+  .content_text{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 12pt;
+  }
+}

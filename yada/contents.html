@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
+      <link rel="stylesheet" type="text/css" href="/css/topnav.css">
+      <link rel="stylesheet" type="text/css" href="yada_style.css">
+      <link rel="stylesheet" type="text/css" href="yada_content.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="/jquery-3.5.1.min.js"></script>
+      <script src="/js/script.js"></script>
+      <script src="js/call_contents.js"></script>
+</head>
+<body>
+  <nav class="topnav" id="myTopnav" style="margin-bottom: 0px;">
+    <a href="main.html" >Back</a>      
+</nav>
+<!-- MAIN (Center website) -->
+<div class="main" >
+  <div  class="top_menu">
+        <a style="color: rgb(90, 89, 89); font-family: Impact, 
+        Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 60pt; margin-left: 20px;">YADA </a></br>
+        <a style="color: rgb(100, 98, 98); font-size: 15pt; margin-left: 20px;">An indie open world game</a>
+        <hr>
+
+        <div id="myBtnContainer" style="margin-top: 10px;">
+          <button class="btn" onclick="filterSelection('3d')"> 3D Models</button>
+          <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+          <button class="btn" onclick="filterSelection('freeassets')"> Free Assets</button>            
+          <button class="btn active" onclick="filterSelection('all')"> All</button>
+        </div>
+  </div>
+<!-- Portfolio Gallery Grid -->
+  <div class="row" >  
+
+    <div  class="column 3d" > <!-- Detail Picture -->
+      <hr style="margin-bottom: 50px;">
+        <div class="content_">
+          
+          <a target="_blank" href="#" onClick='openImage(this)'><img style="width: 100%;height: auto;" src="media/yada_detailed.png"/></a> <br>    
+        </div>
+    </div>
+
+    <!-- Screenshots from the game -->
+    <div class="column freeassets" id="get-free-assets" style="margin-bottom: 50px;"></div>
+    <div class="column nature" id="get-nature" style="margin-bottom: 50px;"></div>
+
+    <div class="column all" style="margin-bottom: 100px;"> <!-- Trailer Video -->
+      <hr style="margin-bottom: 30px;">
+      <div class="content_">
+       
+        <iframe allow="fullscreen" src="https://www.youtube.com/embed/WrijVKr0Aok"> </iframe>
+
+      </div>
+      <h4 class="content_title">YADA | Indie Game Project </h4>
+      <p class= "content_text">Watch my YouTube video made by footage from game and Blender view</p>
+    </div>
+
+  </div> <!-- row end -->
+</div> <!-- main end -->
+
+<script>
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column_half");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  y =  document.getElementsByClassName("column_half");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+  for (i = 0; i < y.length; i++) {
+    w3RemoveClass(y[i], "show");
+    if (y[i].className.indexOf(c) > -1) w3AddClass(y[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+function openImage(element) {
+        var newTab = window.open();
+        setTimeout(function() {
+            newTab.document.body.innerHTML = element.innerHTML;
+        }, 500);
+        return false;
+}
+
+/*Image Slide*/
+let slideIndex = 1;
+
+showSlides(slideIndex, x);
+
+
+function plusSlides(n, x) {
+  showSlides(slideIndex += n, x);
+}
+
+function currentSlide(n, x) {
+  showSlides(slideIndex = n, x);
+}
+
+
+function showSlides(n, x) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides "+x);
+  let dots = document.getElementsByClassName("demo "+x) ;
+  let captionText = document.getElementById("caption "+x);
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+</body>
+</html>
