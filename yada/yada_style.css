@@ -76,7 +76,43 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 0.05cap;
     text-shadow: 2px 2px black;
-    color:rgb(241, 166, 79);
-    font-size: 8vw;
+    color:rgb(231, 196, 155);
+    font-size: 32pt;
+    top: 50px;
+    position: relative;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+  .back-img-yada{  
+    background-image:url("/yada/media/yada_view111.png");
+    height:720px;
+    width: 500px;
+    float: left;
+    left: 0;
+    background-position: left;
+    background-repeat:no-repeat;
+    background-size: contain;
+  }
+  .back-img-yada p{  
+    position: absolute; 
+    padding-left: 1%; 
+    padding-top: 50%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style:normal;
+    font-weight: bold;
+  }
+
+  .main_text{
+    caret-color: transparent; /*cursor blink*/
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.05cap;
+    text-shadow: 2px 2px black;
+    color:rgb(231, 196, 155);
+    font-size: 32pt;
+    top: 250px;
+    position: relative;
 }
 }
