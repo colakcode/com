@@ -23,7 +23,7 @@
 */
 
 .back-yada {
-background: transparent;
+  background: linear-gradient(to bottom right, #0b0d12 55%, #0494b8 100%);
 z-index: 1;
 }
 
@@ -96,7 +96,7 @@ z-index: 1;
 
 /* for using image inside divs instead of using background image for top-slider */
 .slider-img-yada{  
-content:url("/yada/media/banner1080.png");
+content:url("/yada/media/banner1080.jpg");
 height: 100%;
 width: auto;
 margin-left: 0%;
@@ -225,7 +225,7 @@ cursor: pointer;
   }
 
   .slider-img-yada{  
-    content:url("/yada/media/banner1367.png");
+    content:url("/yada/media/banner1367.jpg");
     height: 100%;
     width: auto;
     margin-left: 0%;
@@ -262,7 +262,7 @@ cursor: pointer;
   }
 
   .slider-img-yada{  
-    content:url("/yada/media/banner900.png");
+    content:url("/yada/media/banner900.jpg");
     height: 100%;
     width: auto;
     margin-left: 0%;
@@ -275,7 +275,7 @@ cursor: pointer;
 
 @media screen and (max-width: 600px) {
   .slider-img-yada{  
-    content:url("/yada/media/banner900.png");
+    content:url("/yada/media/banner900.jpg");
     height: 100%;
     width: auto;
     margin-left: 0%;
