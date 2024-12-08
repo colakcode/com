@@ -30,14 +30,25 @@
         <hr>
 
         <div id="myBtnContainer" style="margin-top: 10px;">
+          <button class="btn active" onclick="filterSelection('all')"> All</button>
           <button class="btn" onclick="filterSelection('3d')"> 3D Models</button>
           <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-          <button class="btn" onclick="filterSelection('freeassets')"> Free Assets</button>            
-          <button class="btn active" onclick="filterSelection('all')"> All</button>
+          <button class="btn" onclick="filterSelection('freeassets')"> Free Assets</button>  
+          <button class="btn" onclick="filterSelection('teaser')"> Teaser</button>                   
         </div>
   </div>
 <!-- Portfolio Gallery Grid -->
   <div class="row" >  
+
+    <div class="column all" style="margin-bottom: 1px;">
+      <h3 class="content_title">About me and my project Yada</h3>
+      <p class="content_text">Hello, I'm Kemal Çolak and YADA is my indie game project. I'm trying to develop an open world game similar to The Legend of Zelda: Breath of the Wild 
+        and Genshin Impact as a complete amateur. I have no experience in the game industry before.</p><br>
+      <p class="content_text">I plan to share the details of my game, which I prepared using 3D models I made in Blender, code scripts I wrote and some free assets, on this page.</p><br>
+      <p class="content_text">While continuing to develop Yada, I'm also trying to learn the Unity game engine and improve myself. I hope you like it. I'm waiting for you to send
+         all your positive and negative comments to my email address <a style="color: rgb(43, 66, 92); text-decoration: none;" href="mailto:info@colakcode.com">info@colakcode.com</a></p>
+
+    </div>
 
     <div class="column 3d" id="get-3d-models" style="margin-bottom: 50px;"></div>
 
@@ -53,7 +64,7 @@
     <div class="column freeassets" id="get-free-assets" style="margin-bottom: 50px;"></div>
     <div class="column nature" id="get-nature" style="margin-bottom: 50px;"></div>
 
-    <div class="column all" style="margin-bottom: 100px;"> <!-- Trailer Video -->
+    <div class="column teaser" style="margin-bottom: 100px;"> <!-- Trailer Video -->
       <hr style="margin-bottom: 30px;">
       <div class="content_">
        

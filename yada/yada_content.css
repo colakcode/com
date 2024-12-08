@@ -132,12 +132,13 @@ h1 {
   margin-left: 25%;
   margin-right: 25%;
   font-weight: bold;
+  color: rgb(34, 44, 53);
 }
 
 .content_text{
   margin-left: 25%;
   margin-right: 25%;
-  font-size: 12pt;
+  font-size: 14pt;
 }
 
 /* Clear floats after rows */ 
