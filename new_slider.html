@@ -204,6 +204,12 @@
               <img src="/media/main_slide/colorscan_banner.jpg">
             </a>
           </div>
+
+          <div class="carousel-item">
+            <a href="https://www.artstation.com/colakart" target="_blank">
+              <img src="/media/main_slide/artstation_banner.jpg">
+            </a>
+          </div>
           
 
         </div>
@@ -218,6 +224,7 @@
         <span class="dot" onclick="dotSlide(0)"></span>
         <span class="dot" onclick="dotSlide(1)"></span>
         <span class="dot" onclick="dotSlide(2)"></span>
+        <span class="dot" onclick="dotSlide(3)"></span>
       </div>
 </section>
 
@@ -282,6 +289,7 @@
         if(cIndex == 0)     slideTitle = "YADA - Indie Game Project";
         else if(cIndex ==1) slideTitle = "CLK Apps - Android Applications";
         else if(cIndex ==2) slideTitle = "New Color Scanner"
+        else if(cIndex ==3) slideTitle = "3D Models & VFX on ArtStation"
 
         // Sınıfı 'carousel-title' olan ilk <h2> elementini seç
         const titleItem = document.querySelector('.carousel-title');
