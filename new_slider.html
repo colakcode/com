@@ -1,0 +1,335 @@
+<style>
+.carousel { 
+  width: 101%; 
+  padding: 0px 0; 
+  height: 480px;
+  text-align: center; 
+  position: relative; 
+  margin-top: 40px;
+}
+
+/* Başlık */
+.carousel-title {
+    /* Mevcut stiller */
+    color: #2b333a; /* Beyaz metin rengi */
+    margin-bottom: 10px;
+    font-size: 28px;
+    
+}
+
+.carousel-text {
+    /* Mevcut stiller */
+    color: #4a5258; /* Beyaz metin rengi */
+    margin-bottom: 20px;
+
+    /* Yeni Şık Font (Montserrat) ve Kalınlık */
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 24px; /* Başlık için büyük boyut */
+    font-weight: 200; /* Kalın font */
+    
+    /* Şık Gölge Efekti */
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),     /* Derinlik için koyu gölge */
+        0 0 10px rgba(255, 255, 255, 0.2);  /* Hafif parlama (glow) efekti */
+}
+
+/* Görünen pencere */
+.carousel-window {
+  width: 900px; /* 3 item */
+  margin: 0 auto;
+  overflow: hidden;   /* <── En kritik satır */
+}
+
+/* Slide Track */
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.4s ease;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+/* Slide item */
+.carousel-item img {
+  height: auto; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+  width:1150px;
+  border-radius: 22px;
+  /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+}
+
+.carousel-dots{
+  margin-top: 15px;
+
+}
+
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  caret-color: transparent; /*cursor blink*/
+  z-index: 3;
+}
+
+.dot.active {
+  background-color: #ff5f5f;
+}
+
+/* Oklar */
+.nav {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 45px;
+  color: var(--body_color);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.6s ease;
+  caret-color: transparent;
+}
+
+.nav:hover {
+  color: rgba(30, 50, 61, 0.76);
+}
+
+.nav.left { left: 240px; }
+.nav.right { right: 240px; }
+
+
+
+/* Laptop */
+@media (max-width: 1280px) {
+  .carousel { }  
+
+  .carousel-item img {
+    height: auto; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+    width:900px;
+    border-radius: 22px;
+    /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+  }
+ }
+
+/* Tablet (2 item) */
+@media (max-width: 1024px) {
+  .carousel-window { width: 600px; }
+
+  .carousel-item img {
+      height: auto; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+      width:700px;
+      border-radius: 22px;
+      /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+  }
+
+  .nav.left { left: 100px; }
+  .nav.right { right: 100px; }
+
+    .carousel {}
+}
+
+/* Tablet */
+@media (max-width: 768px) { 
+    .carousel { 
+    } 
+
+    .carousel-item img {
+      height: auto; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+      width:600px;
+      border-radius: 22px;
+      /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+  }
+
+}
+
+/* Mobil (1 item) */
+@media (max-width: 600px) {
+    .carousel { 
+      height: 240px;
+    } 
+
+    .carousel-item img {
+      height: auto; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+      width:400px;
+      border-radius: 22px;
+      /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+  }
+
+  .carousel-window { width: 260px; }
+}
+
+/* Küçük telefon */
+@media (max-width: 480px) {
+    .carousel { 
+      height: 240px;
+    } 
+
+    .carousel-item img {
+      height: auto; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+      width:300px;
+      border-radius: 22px;
+      /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+  }
+
+ }
+
+  
+</style>
+
+<section class="carousel">
+
+  <h3><b class="carousel-title">CLK Apps</b></h3>
+
+      <!-- Sadece burası pencere -->
+      <div class="carousel-window">
+        <div class="carousel-track">
+
+          <div class="carousel-item">
+            <a href="/yada/main.html">
+              <img src="/media/main_slide/yada_banner.png">
+            </a>
+          </div>
+
+          <div class="carousel-item">
+            <a href="https://play.google.com/store/apps/dev?id=8107760137135745209" target="_blank">
+              <img src="/media/main_slide/clkapps_banner.png">
+            </a>
+          </div>
+
+          
+          <div class="carousel-item">
+            <a href="https://play.google.com/store/apps/details?id=com.clk.colorscan">
+              <img src="/media/main_slide/colorscan_banner.png">
+            </a>
+          </div>
+          
+
+        </div>
+      </div>
+
+      <!--
+      <div class="nav left" onclick="prevSlide()">&#10094;</div>
+      <div class="nav right" onclick="nextSlide()">&#10095;</div>
+      -->
+
+      <div class="carousel-dots" >
+        <span class="dot" onclick="dotSlide(0)"></span>
+        <span class="dot" onclick="dotSlide(1)"></span>
+        <span class="dot" onclick="dotSlide(2)"></span>
+      </div>
+</section>
+
+<script>
+  
+  //Number of images to be displayed on the screen
+  let mobileCount = 1;
+  let tabletCount = 1;
+  let pcCount = 1;
+    
+
+    function visibleCount() {
+        const w = window.innerWidth;
+        if (w < 600) return mobileCount;       // Mobil 
+        if (w < 900) return tabletCount;       // Tablet / küçük laptop
+        return pcCount;                    // Normal masaüstü
+    }
+
+    function updateWindowWidth() {
+        const win = document.querySelector(".carousel-window");
+        const item = document.querySelector(".carousel-item");
+
+        if (!item) return;
+
+        const style = window.getComputedStyle(item);
+
+        const itemWidth =
+            item.offsetWidth +                // Content width
+            parseInt(style.marginLeft) + 
+            parseInt(style.marginRight) +
+            20;                               // Change the gap accourding to the images
+
+        const visible = visibleCount();
+
+        win.style.width = (itemWidth * visible) + "px";
+    }
+
+
+    let cIndex = 0;
+    function updateCarousel() {
+        const track = document.querySelector(".carousel-track");
+        const items = document.querySelectorAll(".carousel-item");
+
+        const visible = visibleCount();
+        const maxIndex = items.length - visible; // ← DOĞRU SINIR BURADA
+
+        // Sınırlar
+        if (cIndex < 0) cIndex = 0;
+        if (cIndex > maxIndex) cIndex = maxIndex;
+
+        // Offset hesaplama
+        let offset = 0;
+        for (let i = 0; i < cIndex; i++) {
+            offset += items[i].offsetWidth + 40; // gap dahil
+        }
+
+        track.style.transform = `translateX(-${offset}px)`;
+
+        updateDots(cIndex);
+
+        let slideTitle = "CLK Apps";
+        if(cIndex == 0)     slideTitle = "YADA - Indie Game Project";
+        else if(cIndex ==1) slideTitle = "CLK Apps - Android Applications";
+        else if(cIndex ==2) slideTitle = "New Color Scanner"
+
+        // Sınıfı 'carousel-title' olan ilk <h2> elementini seç
+        const titleItem = document.querySelector('.carousel-title');
+
+        if (titleItem) {
+        // <h2> elementinin içindeki metni değiştirme
+          titleItem.innerText = slideTitle;
+
+        // Eğer HTML etiketleri de eklemek isteseydik şunu kullanabilirdik:
+        // baslikElementi.innerHTML = "<b>" + yeniBaslik + "</b>";
+        } else {
+            console.error("Belirtilen sınıf adına sahip bir element bulunamadı.");
+        }
+    }
+
+    function dotSlide(n){
+      cIndex = n;
+      updateCarousel();
+      updateDots(n);
+    }
+
+    function updateDots(index) {
+    const dots = document.querySelectorAll(".dot");
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+}
+
+    function nextSlide() {
+        cIndex++;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        cIndex--;
+        updateCarousel();
+    }
+
+    // Ekran değişince her şeyi yenile
+    window.addEventListener("resize", () => {
+        updateWindowWidth();
+        updateCarousel();
+    });
+
+    // İlk yüklemede başlat
+    window.addEventListener("load", () => {
+        updateWindowWidth();
+        updateCarousel();
+    });
+
+</script>
+

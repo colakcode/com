@@ -1,0 +1,51 @@
+<div class ="content" style="padding-top: 100px; background-color: (--body_color);">
+    
+    <h2 class="title1">CLK Apps - Android Applications</h2>
+    <h3><b>Easy and usefull personel applications for Android phones.</b></h3>
+    <p >CLK Apps is an independent software studio focused on creating practical, intuitive, and user-driven Android applications for everyday needs. Our projects in the Google Play Tools category are built with a minimalist approach, prioritizing clarity, speed, and real-world usefulness. Each app reflects our belief that simple ideas, when executed with care, can make technology feel more personal and accessible.</p>
+    <br>
+    <p>Under the Yada – Indie Game Project, we explore stylized worlds, atmospheric storytelling, and experimental mechanics. Our goal is to craft small but memorable game experiences that carry the spirit of independent development—creative freedom, distinctive visuals, and gameplay that feels both focused and expressive. Alongside our games, we also share lightweight open-source Android libraries, contributing to the developer community and supporting others who build with the same passion.</p>
+    <br>
+    <p>In addition to software and game development, we extend our creative vision into 3D design using Blender. Here, we experiment with stylized props, low-poly environments, and clean visual forms that complement our game worlds and brand identity. Blender allows us to transform ideas into expressive digital models—whether it’s crafting atmospheric scene elements, building unique game assets, or designing visual concepts that inspire future projects.</p>
+    <br>
+          
+        <a class="soft-btn" href="https://play.google.com/store/apps/dev?id=8107760137135745209" target="_blank" >
+          <img src="media/icons/google_play_black.png" alt="">
+          <span>click for clk apps</span>
+        </a>
+
+        <a class="soft-btn" href="/yada/main.html" target="_blank" >
+          <img src="media/icons/click.png" alt="">
+          <span>yada - indie game project</span>
+        </a>
+
+        <a id="btn_apps" class="soft-btn" data-target="get-hover-menu">
+          <img src="media/icons/scroll2.png" alt="">
+          <span>android apps</span>
+        </a>
+
+        <a id="btn_3d" class="soft-btn" data-target="get-arts">
+          <img src="media/icons/3d.png" alt="">
+          <span>3d models</span>
+        </a>
+ 
+        <a id="btn_lib" class="soft-btn" data-target="bottom_content">
+          <img src="media/icons/scroll2.png" alt="">
+          <span>android libraries</span>
+        </a>
+
+    <br/>   
+    
+</div>
+
+<script>
+
+  document.querySelectorAll(".soft-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.getElementById(btn.dataset.target).scrollIntoView({
+            behavior: "smooth",
+            block: "center" 
+        });
+    });
+  });
+</script>

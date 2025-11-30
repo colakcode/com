@@ -34,6 +34,7 @@ showSlides(slideIndex = n);
 }
 
 var slideCount = 0;
+/*
 function showSlides(n) {
 
 var slides = document.getElementsByClassName("top-slider");
@@ -44,9 +45,10 @@ for (var i = 0; i < slides.length; i++) {
   else 
     slides[slideIndex].style.display = "block";
 }
+  
 
 selectDots(slideIndex);
-}
+}*/
 
 function selectDots(n){
 var dots = document.getElementsByClassName("dot");
@@ -89,6 +91,10 @@ setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 function writeAMessageToItem(item, message){
   item.text(message);
 }
+
+
+
+
 
 
 

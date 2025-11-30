@@ -1,17 +1,38 @@
 .topnav {
-  overflow: hidden;
-  background-color: #0b0d12;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgb(0, 0, 0);
+    line-height: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); 
+    padding-left: 1%;
+    padding-right: 1px;
+    
+}
+
+#get-topnav {
+    position: relative;
+    z-index: 9999;
+    overflow: visible !important;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 20px;
   text-decoration: none;
   font-size: 17px;
-  background-color: #0b0d12;
+  font-weight: bolder;
+  
+}
+
+.topnav img{
+  height: 50px;
+  width: auto;
 }
 
 .topnav a:hover {
@@ -20,11 +41,14 @@
 }
 
 .topnav a.sitename{
-  color:white;
+  height: 50px;
+  width: auto;
+  float:right;
+  text-align: center;
 }
 
 .topnav a.sitename:hover{
-  background-color:#0b0d12;
+  background-color:transparent;
 }
 
 .topnav .icon {
@@ -33,13 +57,26 @@
 
 
 @media screen and (max-width: 600px) {
-  .topnav {padding-left: 0px; padding-right:0%}
+  .topnav {
+    padding-left: 0px; 
+    padding-right:0%;
+    position: fixed;
+  }
+
+  .topnav a{
+    background-color: black;
+  }
+
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;

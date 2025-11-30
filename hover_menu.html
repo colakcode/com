@@ -1,0 +1,402 @@
+<style>
+.features-preview{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 40px 0;
+  background-color: transparent;
+  
+}
+
+.features-left{
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /*vertical*/
+  background-color: transparent;
+}
+
+.features-right{
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /*vertical*/
+  background-color: transparent;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Yazı solda, ikon sağda */
+    width: 320px;      
+    cursor: pointer;              /* Denge için ideal genişlik */
+    background-color: transparent;
+}
+
+.close_left{
+     transform: translateX(40px);
+     
+}
+
+.close_right{
+     transform: translateX(-40px);
+}
+
+.feature-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background: transparent;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+
+  transition: 0.25s;
+  display: flex;
+  align-items: center;      /* dikey merkez */
+  justify-content: center;  /* yatay merkez */
+  align-items: center;
+}
+
+.feature-box img {
+    width: 90%;                /* Kutunun %60’ı → tam sığar */
+    height: 90%;
+    object-fit: contain;       /* Oranı korur, kırpmaz, taşırmaz */
+    display: block;
+    pointer-events: none;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    padding: 0%;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 5px;
+    background-color: transparent;
+}
+
+.feature-box img:hover{
+     transform: scale(1.05);
+}
+
+:root {
+  --hover_color: rgb(52, 140, 151); 
+}
+
+
+
+.feature-box:hover {
+  background:var(--hover_color);
+  color: white;
+  transform: scale(1.25);
+}
+
+
+.feature-item:hover .feature-box {
+    background: var(--hover_color);
+    transform: scale(1.05);
+}
+
+.feature-item:hover .feature-text h3 {
+    color: var(--hover_color);
+}
+
+/* ORTA TELEFON GÖRSELİ */
+.feature-center img {
+    height: 600px;     /* Sabit yükseklik → İstediğini burada ayarla */
+    width: auto;       /* En boy oranını korur */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    transition: opacity .65s ease, transform .65s ease;
+}
+
+.feature-center img.ready {
+    opacity: 1;                 /* resim yüklenince görünür */
+}
+
+
+.features-left .feature-text {
+    text-align: right;
+}
+
+.features-right .feature-text {
+    text-align: left;
+}
+
+
+.feature-center img.active {
+    transform: scale(1.23);
+}
+
+.feature-text {
+    text-align: left;
+    max-width: 180px;
+}
+
+.feature-text h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.feature-text p {
+    margin: 6px 0 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.3;
+}
+
+@media (max-width: 1440px) {
+    .feature-center img {
+        height: 400px;
+        width: auto
+    }
+}
+
+@media (max-width: 1280px) {
+    .feature-center img {
+        height: 300px;
+        width: auto
+    }
+}
+
+@media (max-width: 1024px) {
+
+  .features-preview {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+  }
+
+  .features-left,
+  .features-right {
+      display: none !important;  /* Sol ve sağ bloklar gizlenir */
+       flex-direction: row-reverse !important;
+  }
+
+  /* TELEFON GÖRSELİ */
+  .feature-center img {
+      height: 420px;
+      transform: none !important;
+  }
+
+  /* Mobil liste (yeni liste) */
+  .mobile-features {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      width: 100%;
+  }
+
+
+  /* Soldaki feature-item için çocukları ters sıraya çevir */
+  .mobile-features .close_left {
+      flex-direction: row-reverse !important;
+  }
+
+  /* Item mobil görünüm */
+  .mobile-features .feature-item {
+      display: flex !important;
+      flex-direction: row !important;  
+      align-items: center;
+      justify-content: flex-start !important;
+      width: 90%;
+      max-width: 420px;
+      gap: 20px;
+      transform: none !important;
+  }
+
+  /* Metinler sola yaslı */
+  .mobile-features .feature-text {
+      text-align: left !important;
+  }
+
+  /* Hover'da basılmayı azalt */
+  .feature-box {
+      width: 90px;
+      height: 90px;
+  }
+
+  .feature-box:hover {
+      transform: scale(1.12);
+  }
+
+}
+
+
+</style>
+<div class ="content" style="padding-top: 0px; background-image: url('/media/hoover/background.png'); background-repeat: no-repeat; ">
+
+    <div style="text-align: center;"><h2 class="title1">CLK Apps on Google Play</h2></div>
+    <section class="features-preview">
+      <div class="features-left">
+
+        <!-- CLKGRAPHS-->
+        <div class="feature-item close_left"
+                data-img="/media/hoover/clkgraphs.png"
+                data-link="https://play.google.com/store/apps/details?id=com.clk.clkgraphs">
+                   
+            <div class="feature-box">
+                <img src="/media/icons/clkgraphs.png"/>
+            </div>
+
+            <div class="feature-text">
+                <h3>clkGarphs - Chart Maker</h3>
+                <p>Make easy chart on your phone!</p>
+            </div>          
+        </div>
+
+        <!-- CLKGRAPHS 3D-->
+        <div class="feature-item close_left"
+                data-img="/media/hoover/clkgraphs3d.png"
+                data-link="https://play.google.com/store/apps/details?id=com.clk.clkgraphs3d">
+                
+            <div class="feature-box">
+                <img src="/media/icons/clkgraphs3d.png"/>
+            </div>
+            <div class="feature-text">
+                <h3>clkGraphs 3D - Chart Maker</h3>
+                <p>Make 3D charts on your phone and use them for your slides</p>
+            </div>
+        </div>
+
+      </div>
+
+      <!-- MIDDLE IMAGE -->
+      <div class="feature-center">
+        <a  id="feature-link" href="" target="_blank"><img id="feature-main" src="/media/hoover/clkgraphs.png"></a>
+      </div>
+
+      <div class="features-right">
+        <!-- CLK BUDGET-->
+        <div class="feature-item close_right"
+                data-img="/media/hoover/clkbudget.png"
+                data-link="https://play.google.com/store/apps/details?id=com.clk.clkbudget">    
+
+              <div class="feature-box">
+                  <img src="/media/icons/clkbudget.png"/>
+              </div>  
+              <div class="feature-text">
+                    <h3>CLK Budget Manager</h3>
+                    <p>Save and follow your daily/montly incomes and expenses with your phone. Easy and free!</p>
+                </div>    
+        </div>
+
+            <!-- COLOR SCAN-->
+        <div class="feature-item close_right"
+                data-img="/media/hoover/colorscan.png"
+                data-link="https://play.google.com/store/apps/details?id=com.clk.colorscan">        
+                
+              <div class="feature-box" >
+                  <img src="/media/icons/colorscan.png"/>
+              </div>  
+              <div class="feature-text">
+                    <h3>Color Scanner</h3>
+                    <p>User your camera to get color codes</p>
+                </div>    
+        </div>
+
+      </div>
+
+        
+
+    </section>
+</div>
+
+ <div class="mobile-features"></div>
+
+<script>
+const mainImg  = document.getElementById("feature-main");
+const mainLink = document.getElementById("feature-link");
+const boxes = document.querySelectorAll(".feature-item");
+
+boxes.forEach(box => {
+        box.addEventListener("mouseenter", () => {
+
+            mainImg.src = box.getAttribute("data-img");
+            mainLink.href = box.getAttribute("data-link");   // 🔥 EKLENEN SATIR
+
+            if (mainImg.src.endsWith("/media/hoover/clkgraphs.png"))
+                document.documentElement.style.setProperty('--hover_color', '#6e133c');
+
+            else if (mainImg.src.endsWith("/media/hoover/clkgraphs3d.png"))
+                document.documentElement.style.setProperty('--hover_color','#354756');
+
+            else 
+                document.documentElement.style.setProperty('--hover_color', '#214c5f');
+        });
+        });
+
+        mainImg.classList.add("active");
+        setTimeout(()=>mainImg.classList.remove("active"),400);
+
+
+
+
+
+        function buildFeatures() {
+            const isDesktop = window.innerWidth > 1024;
+
+            const leftCol   = document.querySelector(".features-left");
+            const rightCol  = document.querySelector(".features-right");
+            const mobileCol = document.querySelector(".mobile-features");
+
+            // Tüm itemları topla
+            const items = document.querySelectorAll(".feature-item");
+
+            // Önce hepsini ana yerlerinden ayır
+            items.forEach(item => item.remove());
+
+            if (isDesktop) {
+
+                // MASAÜSTÜ — Sol item’ların hepsini ters sıraya çevir, iki kolon halinde yerleştir
+                items.forEach(item => {
+
+                    const box  = item.querySelector(".feature-box");
+                    const text = item.querySelector(".feature-text");
+
+                    if (item.classList.contains("close_left")) {
+                        // TERS SIRA (TEXT | ICON)
+                        item.appendChild(text);
+                        item.appendChild(box);
+                    } 
+                    else {
+                        // NORMAL SIRA (ICON | TEXT)
+                        item.appendChild(box);
+                        item.appendChild(text);
+                    }
+                });
+
+                // İlk iki item solda, diğerleri sağda (senin orijinal yapına göre)
+                items.forEach((item, i) => {
+                    if (i < 2) leftCol.appendChild(item);
+                    else rightCol.appendChild(item);
+                });
+
+            } else {
+
+                // MOBİL — Ters çevirme YOK, hepsi ICON → TEXT sırayla gider
+                items.forEach(item => {
+
+                    const box  = item.querySelector(".feature-box");
+                    const text = item.querySelector(".feature-text");
+
+                    // Mobilde DOM'u doğru sıraya sok
+                    item.appendChild(box);
+                    item.appendChild(text);
+
+                    // Mobile listeye ekle
+                    mobileCol.appendChild(item);
+                });
+            }
+        }
+
+        // İlk yüklemede
+        window.addEventListener("load", buildFeatures);
+        // Ekran boyutu değişince
+        window.addEventListener("resize", buildFeatures);
+
+</script>

@@ -1,0 +1,396 @@
+<style>
+    .art { 
+      width: 101%; 
+      padding: 0px 0; 
+      height: 512px;
+      text-align: center; 
+      position: relative; 
+      margin-top: 70px;
+    
+    }
+
+    /* Başlık */
+    .art-title {
+        /* Mevcut stiller */
+        color: #2b333a; /* Beyaz metin rengi */
+        margin-bottom: 10px;
+        font-size: 28px;
+        
+    }
+
+    .art-text {
+        /* Mevcut stiller */
+        color: #4a5258; /* Beyaz metin rengi */
+        margin-bottom: 20px;
+
+        /* Yeni Şık Font (Montserrat) ve Kalınlık */
+        font-family: 'Montserrat', sans-serif; 
+        font-size: 24px; /* Başlık için büyük boyut */
+        font-weight: 200; /* Kalın font */
+        
+        /* Şık Gölge Efekti */
+        text-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.7),     /* Derinlik için koyu gölge */
+            0 0 10px rgba(255, 255, 255, 0.2);  /* Hafif parlama (glow) efekti */
+    }
+
+    /* Görünen pencere */
+    .art-window {
+      width: 1700px; /* 3 item */
+      margin: 0 auto;
+      overflow: hidden;   /* <── En kritik satır */
+    }
+
+    /* Slide Track */
+    .art-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.4s ease;
+      padding-left: 10px;
+      padding-top: 5px;
+    }
+
+    /* Slide item */
+    .art-item img {
+      height: 350px; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+      width:auto;
+      border-radius: 22px;
+      /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+
+    }
+
+    .art-dots{
+      margin-top: 15px;
+
+    }
+
+    .dota {
+      cursor: pointer;
+      height: 13px;
+      width: 13px;
+      margin: 0 5px;
+      background-color: #5c6a6e;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      caret-color: transparent; /*cursor blink*/
+      z-index: 3;
+    }
+
+    .dota.active {
+      background-color: #ff5f5f;
+    }
+
+    /* Oklar */
+    .nava {
+      position: absolute;
+      top: 35%;
+      transform: translateY(-50%);
+      font-size: 45px;
+      color: rgb(40, 63, 70);
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.6s ease;
+      caret-color: transparent;
+    }
+
+    .nava:hover {
+      color: rgba(30, 50, 61, 0.76);
+    }
+
+    .nava.left { left: 10%; }
+    .nava.right { right: 10%; }
+
+    /* Büyük ekran */
+    @media (max-width: 1440px) { 
+      .art{
+        height: 400px;
+      }
+
+      .nava{
+        top: 45%;
+      }
+
+      .nava.left { left: 5%; }
+      .nava.right { right: 5%; }
+      
+      
+    }
+
+    @media (max-width: 1280px) { 
+      .art{
+        height: 300px;
+      }
+      .art-item img {
+          height: 250px; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+          width:auto;
+          border-radius: 22px;
+          /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+
+      }
+
+      .nava.left { left: 100px; }
+      .nava.right { right: 100px; }
+
+    }
+
+    /* Tablet (2 item) */
+    @media (max-width: 1024px) {
+      .art{
+        height: 300px;
+      }
+
+    .nava {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      font-size: 45px;
+      color: rgb(40, 63, 70);
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.6s ease;
+      caret-color: transparent;
+    }
+
+      .art-window { width: 600px; }
+
+      .nava.left { left: 100px; }
+      .nava.right { right: 100px; }
+
+      .art-item img {
+        height: 250px; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+        width:auto;
+        border-radius: 22px;
+        /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+      }
+    }
+
+    @media (max-width: 768px) {
+      .art{
+        height: 300px;
+      }
+
+      .nava.left { left: 10%; }
+      .nava.right { right: 10%; }
+      
+    /* Slide item */
+    .art-item img {
+      height: 250px; /*Slayta koyduğun resim yüksekliği- bir tek bunu değiştir */
+      width:auto;
+      border-radius: 22px;
+      /*box-shadow: 0px 8px 25px rgba(0,0,0,0.5);  Shadow verilebilir */ 
+
+    }
+
+     }
+
+    /* Mobil (1 item) */
+    @media (max-width: 600px) {
+      .art-window { width: 260px; }
+    }
+
+</style>
+
+<div class ="content" style="padding-top: 50px; background-color: (--body_color);"> 
+    <h3><b class="art-title" style="text-align: center; position: relative; 
+     font-family: var(--title_main_font);">3D Models from Artstation/Sketchfab</b></h3>
+    <br>
+     <p style="font-family: var(--text_font);">In addition to software and game development, we extend our creative vision into 3D design using Blender. 
+      Here, we experiment with stylized props, 
+      low-poly environments, and clean visual forms that complement our game worlds and brand identity. Blender allows us to transform ideas into expressive 
+      digital models—whether it’s crafting atmospheric scene elements, building unique game assets, or designing visual concepts that inspire future projects.</p>
+    <br>
+    <br>
+        <a class="soft-btn" href="https://www.artstation.com/colakart" target="_blank" >
+          <img src="media/icons/artstation.png" alt="">
+          <span>click for artstation profile</span>
+        </a>
+
+        <a class="soft-btn" href="https://sketchfab.com/colakart" target="_blank" >
+          <img src="media/icons/sketchfab.png" alt="">
+          <span>click for sketchfab contents</span>
+        </a>
+</div>
+
+
+
+<section class="art">
+      <!-- Sadece burası pencere -->
+      <div class="art-window">
+        <div class="art-track">
+            <!-- filled fromt js-ADDED ART SLIDE-->
+  
+        </div>
+      </div>
+
+      <div class="nava left" onclick="prevSlideArt()">&#10094;</div>
+      <div class="nava right" onclick="nextSlideArt()">&#10095;</div>
+
+      <div class="art-dots" >
+          <!-- filled fromt js-ADDED ART SLIDE-->
+      </div>
+</section>
+
+<hr class="rounded">
+
+<script>
+
+    //Number of images to be displayed on the screen
+    let mobileCountArt = 1;
+    let tabletCountArt = 2;
+    let pcCountArt = 3;
+    
+
+    function visibleCountArt() {
+        const w = window.innerWidth;
+        if (w < 768) return mobileCountArt;       // Mobil 
+        if (w < 1024) return tabletCountArt;       // Tablet / küçük laptop
+        return pcCountArt;                    // Normal masaüstü
+    }
+
+    function updateWindowWidthArt() {
+        const win = document.querySelector(".art-window");
+        const item = document.querySelector(".art-item");
+
+        if (!item) return;
+
+        const style = window.getComputedStyle(item);
+
+        const itemWidth =
+            item.offsetWidth +                // Content width
+            parseInt(style.marginLeft) + 
+            parseInt(style.marginRight) +
+            20;                               // Change the gap accourding to the images
+
+        const visible = visibleCountArt();
+
+        win.style.width = (itemWidth * visible) + "px";
+    }
+
+
+    let cIndexArt = 0;
+    function updateArt() {
+        const track = document.querySelector(".art-track");
+        const items = document.querySelectorAll(".art-item");
+
+        const visible = visibleCountArt();
+        const maxIndex = items.length - visible; // ← DOĞRU SINIR BURADA
+
+        // Sınırlar
+        if (cIndexArt < 0) cIndexArt = 0;
+        if (cIndexArt > maxIndex) cIndexArt = maxIndex;
+
+        // Offset hesaplama
+        let offset = 0;
+        for (let i = 0; i < cIndexArt; i++) {
+            offset += items[i].offsetWidth + 20; // gap dahil
+        }
+
+        track.style.transform = `translateX(-${offset}px)`;
+
+        updateDotsArt(cIndexArt);
+
+        let slideTitle = "CLK Apps";
+        if(cIndexArt == 0)     slideTitle = "Sword";
+        else if(cIndexArt ==1) slideTitle = "Cannon";
+        else if(cIndexArt ==2) slideTitle = "Gun";
+        else if(cIndexArt ==3) slideTitle = "Gun1";
+        else if(cIndexArt ==4) slideTitle = "Gun2";
+        else if(cIndexArt ==5) slideTitle = "Gun3";
+
+        // Sınıfı 'art-title' olan ilk <h2> elementini seç
+        const titleItem = document.querySelector('.art-title');
+
+        if (titleItem) {
+        // <h2> elementinin içindeki metni değiştirme
+          //titleItem.innerText = slideTitle;
+
+        // Eğer HTML etiketleri de eklemek isteseydik şunu kullanabilirdik:
+        // baslikElementi.innerHTML = "<b>" + yeniBaslik + "</b>";
+        } else {
+            console.error("Belirtilen sınıf adına sahip bir element bulunamadı.");
+        }
+    }
+
+    function dotSlideArt(n){
+      cIndexArt = n;
+      updateArt();
+      updateDotsArt(n);
+    }
+
+    function updateDotsArt(index) {
+      const dots = document.querySelectorAll(".dota");
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+    }
+
+    function nextSlideArt() {
+        cIndexArt++;
+        updateArt();
+    }
+
+    function prevSlideArt() {
+        cIndexArt--;
+        updateArt();
+    }
+
+    // Ekran değişince her şeyi yenile
+    window.addEventListener("resize", () => {
+        updateWindowWidthArt();
+        updateArt();
+    });
+
+    window.addEventListener("load", () => {
+        updateWindowWidthArt();
+        updateArt();
+    });
+
+
+    //ADDED ART SLIDE
+    const data = [
+      { img: "/media/arts/sword.png", link: "https://www.artstation.com/artwork/YGrE9V", title:"Sword - ArtStation" },
+      { img: "/media/arts/gun.png", link: "https://www.artstation.com/artwork/dy4oyw", title:"Sword - ArtStation" },
+      { img: "/media/arts/cannon.png", link: "https://www.artstation.com/artwork/L4moPR", title:"Gun - ArtStation"},
+      { img: "/media/arts/shield.png", link: "https://www.artstation.com/artwork/lGzbxV", title:"Shield - ArtStation"},
+      { img: "/media/arts/ax.png", link: "https://sketchfab.com/3d-models/ax-ca86040c894e45ff8b12c5a0eda6cb25", title:"Ax - Sketchfb" },
+      { img: "/media/arts/bow.png", link: "https://sketchfab.com/3d-models/classic-bow-arrow-bag-3ffa674f7fab46bd801a2a416c7da1af", title:"Bow/Arrow Bag - Sketchfab" },
+      { img: "/media/arts/bmw.png", link: "https://sketchfab.com/3d-models/bmw-2002ti-be22631374fd4cf086be3a6271cb6838", title:"BMW 2002ti - Sketchfab" }
+    ];
+
+   
+    data.forEach((obj,index) => {
+          //art slide ekleme
+          const track = document.querySelector(".art-track");
+
+          // art-item oluştur
+          const item = document.createElement("div");
+          item.classList.add("art-item");
+
+          // <a> oluştur
+          const link = document.createElement("a");
+          link.href = obj.link;
+
+          // <img> oluştur
+          const img = document.createElement("img");
+          img.src = obj.img;
+          img.title = obj.title;
+
+          // Yapıyı birleştir
+          link.appendChild(img);
+          item.appendChild(link);
+
+          // art-track içine ekle
+          track.appendChild(item);
+
+          const dots = document.querySelector(".art-dots");
+          const dot = document.createElement("span");
+          dot.classList.add("dota");
+          dot.addEventListener("click", () => {
+            dotSlideArt(index);    
+          });
+          //dots.appendChild(dot);
+          
+    });
+
+
+</script>

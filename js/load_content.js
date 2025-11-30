@@ -1,4 +1,22 @@
 /* Load Contents */
+
+$(document).ready(function(){     
+  $("#get-intro").load("/contents/intro.html");
+});
+
+$(document).ready(function(){     
+  $("#get-new-slider").load("new_slider.html");
+});
+
+$(document).ready(function(){     
+  $("#get-hover-menu").load("hover_menu.html");
+});
+
+$(document).ready(function(){     
+  $("#get-arts").load("/contents/arts.html");
+});
+
+
 $(document).ready(function(){     
   $("#get-footer").load("/footer.html");
 });
@@ -30,3 +48,5 @@ $(document).ready(function(){
 $(document).ready(function(){     
   $("#get-privacy-top").load("/policy/top.html");
 });
+
+
