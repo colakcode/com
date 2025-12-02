@@ -334,10 +334,12 @@
     });
 
     // İlk yüklemede başlat
-    window.addEventListener("load", () => {
+    const ro = new ResizeObserver(() => {
         updateWindowWidth();
         updateCarousel();
     });
+
+    ro.observe(document.querySelector(".carousel-window"));
 
 </script>
 
